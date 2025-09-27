@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp"
+    tools:context=".RegisterActivity">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/txtRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tạo Tài Khoản Mới"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp" />
+
+    <!-- Họ tên đầy đủ -->
+    <EditText
+        android:id="@+id/edtFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Họ tên đầy đủ"
+        android:inputType="textPersonName"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/txtRegisterTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp" /> <!-- Đã tăng từ 48dp lên 64dp để đẩy form xuống -->
+
+    <!-- Tên đăng nhập / Email -->
+    <EditText
+        android:id="@+id/edtRegisterUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email hoặc Tên đăng nhập"
+        android:inputType="textEmailAddress"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/edtFullName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" /> <!-- Đã tăng từ 16dp lên 24dp -->
+
+    <!-- Mật khẩu -->
+    <EditText
+        android:id="@+id/edtRegisterPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Mật khẩu (ít nhất 6 ký tự)"
+        android:inputType="textPassword"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/edtRegisterUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" /> <!-- Đã tăng từ 16dp lên 24dp -->
+
+    <!-- Xác nhận mật khẩu -->
+    <EditText
+        android:id="@+id/edtConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Xác nhận mật khẩu"
+        android:inputType="textPassword"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/edtRegisterPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" /> <!-- Đã tăng từ 16dp lên 24dp -->
+
+    <!-- Nút Đăng ký -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký tài khoản"
+        android:backgroundTint="#03DAC5"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/edtConfirmPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" /> <!-- Đã tăng từ 40dp lên 48dp -->
+
+    <!-- "Đã có tài khoản?" Text -->
+    <TextView
+        android:id="@+id/txtHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đã có tài khoản?"
+        android:textColor="#555555"
+        app:layout_constraintBottom_toTopOf="@id/btnGoToLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Nút Quay lại Đăng nhập -->
+    <Button
+        android:id="@+id/btnGoToLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quay lại Đăng nhập"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
