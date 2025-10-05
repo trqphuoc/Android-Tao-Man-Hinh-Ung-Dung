@@ -12,10 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firstandroidproject">
 
-        <!-- Màn hình đăng ký -->
-        <activity android:name=".ManHinhDangKi" />
-
-        <!-- Màn hình đăng nhập (mặc định mở đầu tiên) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,6 +20,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.Firstandroidproject" />
+
+        <activity
+            android:name=".ManHinhDangKi"
+            android:exported="false" />
+
     </application>
 
 </manifest>
