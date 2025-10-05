@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Khai báo các biến cho các nút bấm
+    Button btnLogin;
     Button btnCreateAccount;
 
     @Override
@@ -26,12 +28,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Ánh xạ nút "Tạo tài khoản"
+        // --- CODE TÍCH HỢP ---
+
+        // 1. Ánh xạ (tìm và gán) các nút từ file layout XML
+        btnLogin = findViewById(R.id.btnLogin);
         btnCreateAccount = findViewById(R.id.btnCreateAccount);
 
-        // Sự kiện bấm nút
+        // 2. Sự kiện cho nút "Đăng nhập" -> Chuyển sang trang Profile
+        btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
+
+        // 3. Sự kiện cho nút "Tạo tài khoản" -> Chuyển sang trang Đăng Kí
         btnCreateAccount.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ManHinhDangKi.class);
+            Intent intent = new Intent(MainActivity.this, ManHinhDangKi.class); // Giả sử bạn có màn hình ManHinhDangKi.java
             startActivity(intent);
         });
     }
